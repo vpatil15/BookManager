@@ -1,0 +1,18 @@
+<div style="max-width: 600px; margin: 0 auto;">
+  <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">✏️ Edit Book Details</h2>
+  <form action="/books/<%= @book.id %>" method="post">
+    <label>📖 Book Title:
+      <input type="text" name="title" value="<%= @book.title %>" required>
+    </label>
+    <label>✍️ Author:
+      <input type="text" name="author" value="<%= @book.author %>" required>
+    </label>
+    <label>📝 Description:
+      <textarea name="description"><%= @book.description %></textarea>
+    </label>
+    <div style="text-align: center;">
+      <button type="submit" style="font-size: 1.1em; padding: 15px 30px;">💾 Update Book</button>
+      <a href="/books/<%= @book.id %>" class="btn" style="background: linear-gradient(135deg, #95a5a6, #7f8c8d); margin-left: 10px;">Cancel</a>
+    </div>
+  </form>
+</div>
